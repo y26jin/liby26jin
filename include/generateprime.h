@@ -1,0 +1,30 @@
+#ifndef _GENERATEPRIME_H_
+#define _GENERATEPRIME_H_
+
+#include "liby26jin.h"
+
+/*
+ * Determine if a number is a Fermat witness
+ */
+extern int fermat_witness(int x);
+
+/*
+ * Determine if a number is a strong probable witness
+ */
+extern int strong_prob_witness(int x);
+
+/*
+ * Fermat test to find prime numbers
+ */
+extern int fermat_test(int start, int end, int *primelist);
+
+/*
+ * Millar-Rabin test to find prime numbers
+ */
+extern int millar_rabin(int start, int end, int *primelist);
+
+/*
+ * Prime find API
+ */
+extern int find_prime(void (*algm), int start, int end, int *primelist);
+#endif

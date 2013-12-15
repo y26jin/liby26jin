@@ -5,7 +5,13 @@
 
 struct Vertex 
 {
-  
+#if INT_COORD
+  int xcoord;
+  int ycoord;
+#elseif FLOAT_COORD
+  double xccord;
+  double ycoord;
+#endif
 };
 
-#endif _VERTEX_H_
+#endif

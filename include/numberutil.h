@@ -6,4 +6,5 @@
 // a faster way to compute integer pow(a,b)
 extern int fast_base_power(int base, int exp);
 
+
 #endif

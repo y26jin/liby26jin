@@ -4,12 +4,12 @@
 #include "liby26jin.h"
 
 /*
- * Determine if a number is a Fermat witness
+ * Determine if a number has Fermat witness
  */
 extern int fermat_witness(int x);
 
 /*
- * Determine if a number is a strong probable witness
+ * Determine if a number has strong witness
  */
 extern int strong_prob_witness(int x);
 

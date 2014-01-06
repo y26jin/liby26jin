@@ -7,15 +7,17 @@
 static int two_exp(int base){
   return base * base;
 }
-
+/*
+ * Fast way to compute pow(a,b)
+ * How it works is firstly compute modulo of radix, e.g. 7 = 2*3 + 1
+ * Thus a^2 need recomputing for three times
+ * In total, the compute time reduces to 4 instead of 7(for b=7)
+ */
 int fast_base_power(int base, int exp){
   int modexp, mainexp = 0;
   int temp = exp;
-  while(temp % 2 == 0){
-    mainexp++;
-    temp = temp>>2;
-  }
-  modexp = temp;
+  mainexp = (exp-exp%2)/2;
+  modexp = exp%2;
   int two_instance = two_exp(base);
   int mod_instance = base;
   for(int i=0;i<modexp;i++){

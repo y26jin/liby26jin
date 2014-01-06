@@ -1,6 +1,7 @@
 #ifndef _LIBY26JIN_H_
 #define _LIBY26JIN_H_
 
+#include <iostream>
 /*
  * Number Theory related macros
  */

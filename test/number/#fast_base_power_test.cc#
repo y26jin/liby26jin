@@ -1,0 +1,7 @@
+#include "liby26jin.h"
+#include "numberutil.h"
+
+int main(){
+  
+  return 0;
+}

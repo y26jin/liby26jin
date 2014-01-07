@@ -4,8 +4,8 @@
 /*
  * Note: this is dumb. It didnt take overflow into account. Will be fixed in the next commit
  */
-static int two_exp(int base){
-  return base * base;
+static unsigned long long two_exp(int base){
+  return (unsigned long long)(base * base);
 }
 /*
  * Fast way to compute pow(a,b)
@@ -13,13 +13,13 @@ static int two_exp(int base){
  * Thus a^2 need recomputing for three times
  * In total, the compute time reduces to 4 instead of 7(for b=7)
  */
-int fast_base_power(int base, int exp){
+unsigned long long fast_base_power(int base, int exp){
   int modexp, mainexp = 0;
   int temp = exp;
   mainexp = (exp-exp%2)/2;
   modexp = exp%2;
-  int two_instance = two_exp(base);
-  int mod_instance = base;
+  unsinged long long two_instance = two_exp(base);
+  unsigned long long mod_instance = base;
   for(int i=0;i<modexp;i++){
     mod_instance = mod_instance * base;
   }

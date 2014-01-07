@@ -1,19 +1,15 @@
 #include "liby26jin.h"
-#include "generateprime.h"
+#include "primenum.h"
 
 /*
  * Determine if a number is Fermat witness
  * TODO:
- *      Write a function to compute a to the bth
  *      Write a function to compute module of big number
  */
 int fermat_witness(int x){
   unsigned long long temp = 1;
   for(int i=1;i<=x;++i){
-    // Here using brute force to compute radix number
-    for(int j=1;j<x;j++){
-      temp = temp * i;
-    }
+    temp = fast_base_power(i,x);
     if(temp % x != 1) return COMPOSITE;
   }
   return PRIME;

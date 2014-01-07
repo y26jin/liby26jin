@@ -4,7 +4,7 @@
 #include "liby26jin.h"
 
 // a faster way to compute integer pow(a,b)
-extern int fast_base_power(int base, int exp);
+extern unsigned long long fast_base_power(int base, int exp);
 
 
 #endif

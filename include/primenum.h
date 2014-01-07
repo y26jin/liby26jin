@@ -1,7 +1,8 @@
-#ifndef _GENERATEPRIME_H_
-#define _GENERATEPRIME_H_
+#ifndef _PRIMENUM_H_
+#define _PRIMENUM_H_
 
 #include "liby26jin.h"
+#include "numberutil.h"
 
 /*
  * Determine if a number has Fermat witness

@@ -11,21 +11,21 @@ Added a Twitter synch
 
 TODO:
 
-Graph Theory:
-
-BFS
-
-DFS
+---Graph Theory:
 
 Shortest Path: DJ, etc
 
-MST: Prim, Kruskal, etc
+MST: Prim, Kruskal, Bovruka
 
 A*
 
-Play around with Numbers:
-
-Test PRIME
+---Play around with Numbers:
 
 Generate PRIME
+
+---Pattern Match
+
+Fix rolling hash
+
+
 

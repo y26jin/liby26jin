@@ -5,7 +5,24 @@ using namespace std;
 int FailTable[256];
 
 void buildFailTable(char *s){
+  FailTable[0] = 0;
+  FailTable[1] = 0;
 
+  for(int i=2;i<strlen(s);i++){
+    int j = FailTable[i-1];
+    while(){
+      if(s[j]==s[i-1]){
+	FailTable[j] = j+1;
+	break;
+      }
+      if(j==0){
+	FailTable[j]=0;
+	break;
+      }
+
+      j=FailTable[j];
+    }
+  }
 }
 
 void kmp(char *s1, char *s2){
